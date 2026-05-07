@@ -23,7 +23,7 @@ jobs:
 
       - name: Run signal sender
         env:
-          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          WA_PHONE: ${{ secrets.WA_PHONE }}
-          WA_APIKEY: ${{ secrets.WA_APIKEY }}
+          ANTHROPIC_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_TOKEN:   ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python signal_sender.py
