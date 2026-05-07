@@ -1,0 +1,21 @@
+# .github/workflows/stocksignals.yml
+name: Daily Stock Signals
+
+on:
+  schedule:
+    - cron: '30 3 * * 1-5'   # 9:00 AM IST (Mon-Fri)
+    - cron: '30 13 * * 1-5'  # 7:00 PM IST (Mon-Fri)
+  workflow_dispatch:           # Manual trigger
+
+jobs:
+  send-signals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate & Send Signals
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WA_PHONE: ${{ secrets.WA_PHONE }}
+          WA_APIKEY: ${{ secrets.WA_APIKEY }}
+        run: |
+          pip install requests
+          python signal_sender.py
