@@ -1,6 +1,5 @@
 # Updated `signal_sender.py` (Fixed Anthropic JSON + Telegram Issues)
 
-```python
 import requests
 import json
 import os
@@ -239,7 +238,6 @@ if not r.ok:
 
 else:
     print("✅ Telegram message sent successfully")
-```
 
 # Main Fixes Applied
 
