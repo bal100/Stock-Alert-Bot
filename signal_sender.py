@@ -239,21 +239,3 @@ if not r.ok:
 else:
     print("✅ Telegram message sent successfully")
 
-# Main Fixes Applied
-
-* Removed broken Anthropic web search tool
-* Fixed JSON parsing failure
-* Fixed `escape_md()` placement bug
-* Added safer response extraction
-* Added better logging/debugging
-* Added Telegram fallback mode
-* Improved Markdown escaping
-* Improved Claude prompt formatting
-
-# Replace Your Existing File
-
-Replace your current `signal_sender.py` with this updated version and push to GitHub.
-
-Then rerun your GitHub Action.
-
-It should work successfully.
